@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<title>CoderBlog</title>
+		
+		<!-- Core CSS -->
+        {% load static %}
+		<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+		
+		<!-- AddOn/Plugin CSS -->
+		<link href="{% static 'assets/css/navy.css' %}" rel="stylesheet" title="Color">
+		<link href="{% static 'assets/css/owl.carousel.css' %}" rel="stylesheet">
+		<link href="{% static 'assets/css/owl.transitions.css' %}" rel="stylesheet">
+		<link href="{% static 'assets/css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'assets/css/aos.css' %}" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="{% static 'assets/css/custom.css' %}" rel="stylesheet">
+		
+		<!-- Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,900,300,700" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic" rel="stylesheet">
+		
+		<!-- Icons/Glyphs -->
+		<link href="{% static 'assets/fonts/fontello.css' %}" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+	</head>
+	
+	<body>
+		
+		<!-- ============================================================= HEADER ============================================================= -->
+		
+		<header>
+			<div class="navbar">
+				
+				<div class="yamm">
+					<div class="navbar-collapse collapse">
+						<div class="container">
+							
+							<!-- ============================================================= LOGO ============================================================= -->
+							
+							<a class="navbar-brand" href="index.html"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt=""></a>
+							
+							<!-- ============================================================= LOGO : END ============================================================= -->
+							
+							
+							<!-- ============================================================= MAIN NAVIGATION ============================================================= -->
+							
+							<ul class="nav navbar-nav">
+								
+								<li class="">
+									<a href="#" class="custom-top-link">Blog</a>
+								</li>
+								
+								<li class="">
+									<a href="#" class="custom-top-link">Acerca de Nosotros</a>
+								</li>
+								
+								<li class="">
+									<a href="#" class="custom-top-link">Cont&aacute;ctenos</a>
+								</li>
+
+								<li class="dropdown searchbox">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceso de usuarios</a>
+											  
+									<div class="dropdown-menu dropdown-menu-right centered-link-div">
+										<form id="search" class="navbar-form search" role="search" method="POST">
+											<input type="text" name="username" id="username-text" class="form-control" placeholder="Usuario">
+											<input type="password" name="password" id="password-text" class="form-control" placeholder="Contrase&ntilde;a">
+											<button type="submit" class="btn btn-submit icon-right-open">Login</button>
+										</form>
+										<div class="mb-3">
+											<a href="#" class="text-center">No tiene cuenta a&uacute;n? Cr&eacute;ela ahora!</a>
+										</div>
+									</div><!-- /.dropdown-menu -->
+								</li><!-- /.searchbox -->
+								
+							</ul><!-- /.nav -->
+							
+							<!-- ============================================================= MAIN NAVIGATION : END ============================================================= -->
+							
+						</div><!-- /.container -->
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.yamm -->
+			</div><!-- /.navbar -->
+		</header>
+		
+		<!-- ============================================================= HEADER : END ============================================================= -->
+		
+		
+		<!-- ============================================================= MAIN ============================================================= -->
+		
+		{% block content %}
+
+        {% endblock %}
+		
+		<!-- ============================================================= MAIN : END ============================================================= -->
+		
+		
+		<!-- ============================================================= FOOTER ============================================================= -->
+		
+		<footer class="dark-bg">
+		  
+			<div class="footer-bottom">
+				<div class="container inner clearfix">
+					<p class="float-left">©2022 CoderBlog. Todos los derechos reservados.</p>
+					<ul class="footer-menu float-right">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="services.html">Acerca de Nosotros</a></li>
+						<li><a href="contact.html">Cont&aacute;ctenos</a></li>
+					</ul><!-- .footer-menu -->
+				</div><!-- .container -->
+			</div><!-- .footer-bottom -->
+		</footer>
+		
+		<!-- ============================================================= FOOTER : END ============================================================= -->
+		
+		<!-- JavaScripts placed at the end of the document so the pages load faster -->
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.easing.1.3.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+		<script src="{% static 'assets/js/popper.min.js' %}"></script>
+		<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'assets/js/affix.js' %}"></script>
+		<script src="{% static 'assets/js/aos.js' %}"></script>
+		<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.isotope.min.js' %}"></script>
+		<script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.easytabs.min.js' %}"></script>
+		<script src="{% static 'assets/js/viewport-units-buggyfill.js' %}"></script>
+		<script src="{% static 'assets/js/selected-scroll.js' %}"></script>
+		<script src="{% static 'assets/js/scripts.js' %}"></script>
+		<script src="{% static 'assets/js/custom.js' %}"></script>
+		
+		<!-- For demo purposes – can be removed on production -->
+		<link href="{% static 'assets/css/green.css" rel="alternate stylesheet" title="Green color' %}">
+		<link href="{% static 'assets/css/blue.css" rel="alternate stylesheet" title="Blue color' %}">
+		<link href="{% static 'assets/css/red.css" rel="alternate stylesheet" title="Red color' %}">
+		<link href="{% static 'assets/css/pink.css" rel="alternate stylesheet" title="Pink color' %}">
+		<link href="{% static 'assets/css/purple.css" rel="alternate stylesheet" title="Purple color' %}">
+		<link href="{% static 'assets/css/orange.css" rel="alternate stylesheet" title="Orange color' %}">
+		<link href="{% static 'assets/css/navy.css" rel="alternate stylesheet" title="Navy color' %}">
+		<link href="{% static 'assets/css/gray.css" rel="alternate stylesheet" title="Gray color' %}">
+		
+		<script src="{% static 'switchstylesheet/switchstylesheet.js' %}"></script>
+		
+		<script>
+			$(document).ready(function(){ 
+				$(".changecolor").switchstylesheet( { seperator:"color"} );
+			});
+		</script>
+		<!-- For demo purposes – can be removed on production : End -->
+	</body>
+</html>

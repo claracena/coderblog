@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+    {% load static %}
+    
+    <section id="register" class="light-bg">
+        <div class="container inner-top-sm inner-bottom">
+            
+            <div class="col-lg-6 inner-right inner-bottom-md">
+                
+                <!-- ============================================================= SECTION – CONTACT FORM ============================================================= -->
+                
+                <section id="register-form">
+                    
+                    <h2>Reg&iacute;strese</h2>
+                    
+                    <form id="registerform" class="forms" action="" method="post">
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="username" class="form-control" placeholder="Nombre de usuario (Requerido)">
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail (Requerido)">
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="password" name="password" class="form-control" placeholder="Contrase&ntilde;a (Requerida)">
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                        
+                        <button type="submit" class="btn btn-submit">Registrarse</button>
+                        
+                    </form>
+                    
+                    <div id="response"></div>
+                    
+                </section>
+                
+                <!-- ============================================================= SECTION – CONTACT FORM : END ============================================================= -->
+                
+            </div><!-- ./col -->
+            
+        </div><!-- /.container -->
+    </section>
+    
+</main>
+
+{% endblock %}

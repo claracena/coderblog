@@ -1,0 +1,28 @@
+/*===================================================================================*/
+/*	CUSTOM CSS STYLES
+/*===================================================================================*/
+
+/* Insert your own styles in here! */
+.navbar-nav > li > a {
+    bottom: 0 !important;
+}
+.navbar-nav > li > a.custom-top-link {
+    border: 1px solid rgba(255,255,255,0) !important;
+    border-radius: 3px !important;
+}
+.navbar-nav > li > a.custom-top-link:hover {
+    border-color: #E6E9ED !important;
+}
+.newsletter .btn-submit, .search .btn-submit {
+    position: inherit !important;
+}
+.icon-right-open:before {
+    content: "" !important;
+}
+.navbar-form.search .btn-submit {
+    display: block !important;
+    width: 100% !important;
+}
+.centered-link-div {
+    text-align: center !important;
+}
