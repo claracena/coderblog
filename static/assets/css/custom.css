@@ -26,3 +26,14 @@
 .centered-link-div {
     text-align: center !important;
 }
+.custom-ddmenu-nolink {
+    margin-left: 20px !important;
+    line-height: 100px !important;
+}
+.custom-registration-form-label > input {
+    margin-bottom: 0 !important;
+}
+.custom-registration-form-label > small {
+    font-size: 70% !important;
+    color: red !important;
+}
