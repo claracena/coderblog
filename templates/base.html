@@ -71,11 +71,24 @@
 									<a href="#" class="custom-top-link">Cont&aacute;ctenos</a>
 								</li>
 
+								{% if request.user.is_authenticated %}
+
+								<li class="dropdown searchbox">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi cuenta</a>
+									
+									<ul class="dropdown-menu">
+										<li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+									</ul>
+								</li>
+
+								{% else %}
+
 								<li class="dropdown searchbox">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceso de usuarios</a>
 											  
 									<div class="dropdown-menu dropdown-menu-right centered-link-div">
 										<form id="search" class="navbar-form search" role="search" method="POST">
+											{% csrf_token %}
 											<input type="text" name="username" id="username-text" class="form-control" placeholder="Usuario">
 											<input type="password" name="password" id="password-text" class="form-control" placeholder="Contrase&ntilde;a">
 											<button type="submit" class="btn btn-submit icon-right-open">Login</button>
@@ -83,8 +96,10 @@
 										<div class="mb-3">
 											<a href="{% url 'login' %}" class="text-center">No tiene cuenta a&uacute;n? Cr&eacute;ela ahora!</a>
 										</div>
-									</div><!-- /.dropdown-menu -->
-								</li><!-- /.searchbox -->
+									</div>
+								</li>
+
+								{% endif %}
 								
 							</ul><!-- /.nav -->
 							

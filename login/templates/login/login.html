@@ -23,37 +23,45 @@
 
                     <br>
                     <small>Todos los campos son requeridos</small>
-                    <form id="registerform" class="forms" action="" method="post">
-                        
+                    <form id="registerform" class="forms" action="" method="post" required="">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-md-12">
-                                <input type="text" name="username" class="form-control" placeholder="Nombre de usuario">
+                                <input type="text" name="username" class="form-control" placeholder="Nombre de usuario" required="">
                             </div>
                         </div>
                         
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-12">
-                                <input type="email" name="email" class="form-control" placeholder="E-mail">
+                                <input type="email" name="email" class="form-control" placeholder="E-mail" required="">
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="row">
                             <div class="col-md-12">
-                                <input type="password" name="password" class="form-control" placeholder="Contrase&ntilde;a">
+                                <input type="password" name="password" class="form-control" placeholder="Contrase&ntilde;a" required="">
                             </div>
                         </div>
                         
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-12">
-                                <input type="password" name="password2" class="form-control" placeholder="Repita su Contrase&ntilde;a">
+                                <input type="password" name="password2" class="form-control" placeholder="Repita su Contrase&ntilde;a" required="">
                             </div>
-                        </div>
+                        </div> -->
                         
-                        <button type="submit" class="btn btn-submit">Registrarse</button>
+                        <button type="submit" class="btn btn-submit">Ingresar</button>
                         
                     </form>
                     
-                    <div id="response"></div>
+                    {% if messages %}
+                    <div id="response" class="mt-3">
+                        {% for message in messages %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                     
                 </section>
                 

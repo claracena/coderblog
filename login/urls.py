@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     path('accounts/', RedirectView.as_view(url='login/')),
 
-    path('accounts/login/', views.login, name='login'),
+    path('accounts/login/', views.loginUser, name='login'),
+    path('accounts/logout/', views.logoutUser, name='logout'),
 ]
