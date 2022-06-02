@@ -43,6 +43,16 @@
 		
 		<header>
 			<div class="navbar">
+
+				<div class="navbar-header">
+					<div class="container">
+						<a class="navbar-brand" href="/"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt=""></a>
+						
+						<!-- ============================================================= LOGO MOBILE : END ============================================================= -->
+						
+						<a class="navbar-toggler btn responsive-menu float-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
+					</div><!-- /.container -->
+				</div><!-- /.navbar-header -->
 				
 				<div class="yamm">
 					<div class="navbar-collapse collapse">
@@ -50,7 +60,7 @@
 							
 							<!-- ============================================================= LOGO ============================================================= -->
 							
-							<a class="navbar-brand" href="index.html"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt=""></a>
+							<a class="navbar-brand" href="/"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt=""></a>
 							
 							<!-- ============================================================= LOGO : END ============================================================= -->
 							
@@ -60,7 +70,7 @@
 							<ul class="nav navbar-nav">
 								
 								<li class="">
-									<a href="#" class="custom-top-link">Blog</a>
+									<a href="/" class="custom-top-link">Blog</a>
 								</li>
 								
 								<li class="">
@@ -74,33 +84,32 @@
 								{% if request.user.is_authenticated %}
 
 								<li class="dropdown searchbox">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi cuenta</a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ request.user.avatar.url }}" class="rounded-circle img-fluid" alt="{{ request.user }}" style="width: auto; height: 40px; margin: 10px 10px 10px 0;"> <span class="custom-ddmenu-username">{{ request.user }}</span></a>
 
 									<ul class="dropdown-menu">
-										<li class="custom-ddmenu-nolink"><img src="{{ request.user.avatar.url }}" class="rounded-circle img-fluid" alt="..." style="width: auto; height: 40px; margin: 10px 10px 10px 0;"> <span>{{ request.user }}</span></li>
+										<li><a href="#">Editar Perfil</a></li>
 										<li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
 									</ul>
 								</li>
 
 								{% else %}
 
-								<li class="dropdown searchbox">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceso de usuarios</a>
-											  
-									<div class="dropdown-menu dropdown-menu-right centered-link-div">
-										<form id="search" class="navbar-form search" role="search" method="POST">
-											{% csrf_token %}
-											<input type="text" name="username" id="username-text" class="form-control" placeholder="Usuario">
-											<input type="password" name="password" id="password-text" class="form-control" placeholder="Contrase&ntilde;a">
-											<button type="submit" class="btn btn-submit icon-right-open">Login</button>
-										</form>
-										<div class="mb-3">
-											<a href="{% url 'register' %}" class="text-center">No tiene cuenta a&uacute;n? Cr&eacute;ela ahora!</a>
-										</div>
-									</div>
+								<li class="">
+									<a href="{% url 'login' %}" class="custom-top-link">Iniciar Sesion</a>
 								</li>
 
 								{% endif %}
+
+								<li class="dropdown searchbox">
+									<a href="#" class="dropdown-toggle custom-top-link" data-toggle="dropdown"><i class="icon-search"></i></a>
+											  
+									<div class="dropdown-menu dropdown-menu-right">
+										<form id="search" class="navbar-form search" role="search">
+											<input type="search" class="form-control" placeholder="Buscar un usuario">
+											<button type="submit" class="btn btn-submit icon-right-open"></button>
+										</form>
+									</div><!-- /.dropdown-menu -->
+								</li><!-- /.searchbox -->
 								
 							</ul><!-- /.nav -->
 							
