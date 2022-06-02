@@ -14,7 +14,7 @@
                 
                 <section id="login-form">
                     <h2>Ingrese a su cuenta</h2>
-                    <form id="registerform" class="forms" action="" method="post" required="">
+                    <form id="registerform" class="forms" action="" method="post">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-md-12">
@@ -51,15 +51,10 @@
                 
                 <section id="register-form">
                     <h2>Reg&iacute;strese</h2>
-
-                    <!-- <h5>
-                        Utiliz&aacute; el siguiente formulario para crear su usuario en CoderBlog y as&iacute; poder
-                        crear nuevos posts, contestar a posts de otros usuarios y ser notificado de las
-                        cosas que te interesan
-                    </h5> -->
                     <small>Todos los campos son requeridos</small>
                     <form id="registerform" class="forms" action="" method="post" required="">
                         {% csrf_token %}
+
                         {% for field in registration_form %}
 
                         <div class="row">
@@ -79,9 +74,7 @@
                                 <a href="{% url 'login' %}" style="font-size: 1rem;">Ya tiene cuenta? Ingrese con sus datos</a>
                             </div>
                         </div>
-
                         <button type="submit" class="btn btn-submit">Reg&iacute;strese</button>
-                        
                     </form>
                     
                     {% if messages %}
