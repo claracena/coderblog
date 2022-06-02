@@ -6,7 +6,7 @@
     {% load static %}
     
     <section id="register" class="light-bg">
-        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
+        <div class="container inner-top-sm d-flex justify-content-center">
             
             <div class="col-lg-6 inner-right inner-bottom-md">
 
@@ -52,13 +52,11 @@
                 <section id="register-form">
                     <h2>Reg&iacute;strese</h2>
 
-                    <h5>
+                    <!-- <h5>
                         Utiliz&aacute; el siguiente formulario para crear su usuario en CoderBlog y as&iacute; poder
                         crear nuevos posts, contestar a posts de otros usuarios y ser notificado de las
                         cosas que te interesan
-                    </h5>
-
-                    <br>
+                    </h5> -->
                     <small>Todos los campos son requeridos</small>
                     <form id="registerform" class="forms" action="" method="post" required="">
                         {% csrf_token %}
@@ -75,31 +73,8 @@
                         </div>
 
                         {% endfor %}
-                        <!-- <div class="row">
-                            <div class="col-md-12">
-                                <input type="text" name="username" class="form-control" placeholder="Nombre de usuario" required="">
-                            </div>
-                        </div>
                         
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="email" name="email" class="form-control" placeholder="E-mail" required="">
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="password" name="password" class="form-control" placeholder="Contrase&ntilde;a" required="">
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="password" name="password2" class="form-control" placeholder="Repita su Contrase&ntilde;a" required="">
-                            </div>
-                        </div> -->
-                        
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-md-12">
                                 <a href="{% url 'login' %}" style="font-size: 1rem;">Ya tiene cuenta? Ingrese con sus datos</a>
                             </div>

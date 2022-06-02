@@ -37,3 +37,9 @@
     font-size: 70% !important;
     color: red !important;
 }
+.custom-error-title {
+    font-size: 8rem !important;
+}
+.forms label {
+    width: auto !important;
+}

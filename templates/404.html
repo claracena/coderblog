@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+
+    <section id="404" class="light-bg">
+        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
+            <div class="col-lg-6 inner-right inner-bottom-md text-center">
+                <h1 class="custom-error-title">404</h1>
+                <p>
+                    La p&aacute;gina que est&aacute; buscando no existe.<br>
+                    Intente <a href="{% url 'login' %}">regresar al inicio</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
