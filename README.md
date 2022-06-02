@@ -9,11 +9,9 @@ ___
 ### Autores
 <dl>
     <dt>Cesar Aracena</dt>
-    <dd>Sistema de login, paginas de error y area de admin personalizada</dd>
-
+    <dd>Sistema de login, paginas de error, sistema de búsqueda y area de admin personalizada</dd>
     <dt>Jose Orozco</dt>
-    <dd>Sistema de formato HTML y area de admin personalizada</dd>
-
+    <dd>Sistema de formato HTML, sistema de búsqueda y area de admin personalizada</dd>
     <dt>Esteban Orozco</dt>
     <dd>Sistema de registro y "acerca de nosotros" y contáctenos</dd>
 </dl>
@@ -25,3 +23,5 @@ ___
 * Página de inicio temporal
 * Página de "Acerca de Nosotros"
 * Página de "Contáctenos"
+* Sistema de busqueda
+* Sistema de administracion personalizado
