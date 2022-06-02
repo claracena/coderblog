@@ -7,6 +7,7 @@ Este será un blog completo creado con Python y Django. Actualmente falta el sis
 ___
 
 ### Autores
+
 <dl>
     <dt>Cesar Aracena</dt>
     <dd>Sistema de login, paginas de error, sistema de búsqueda y area de admin personalizada</dd>
@@ -15,6 +16,18 @@ ___
     <dt>Esteban Orozco</dt>
     <dd>Sistema de registro y "acerca de nosotros" y contáctenos</dd>
 </dl>
+
+___
+
+### Como probar
+
+* Clonar o descargar
+* En la ruta del proyecto, ejecutar `pip install -r requirements.txt`
+* Ejecutar `python manage.py makemigrations`
+* Ejecutar `python manage.py migrate`
+* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones
+* Ejecutar `python manage.py runserver` para ejecutar el servidor
+* Navegar a [127.0.0.1:8000](http://127.0.0.1:8000)
 
 ___
 
