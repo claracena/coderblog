@@ -1,15 +1,21 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
+from .models import User
 from login.forms import RegistrationForm
 
 # Create your views here.
 
 def loginUser(request):
+    # redirect if authenticated
+    if request.user.is_authenticated:
+        return redirect('index')
+
     # Which page to show
     page = 'login'
+    errors = 0
 
     # Login User
     if request.method == 'POST':
@@ -21,25 +27,33 @@ def loginUser(request):
             user = User.objects.get(username=username)
         except:
             messages.error(request, 'Usuario inexistente')
+            errors += 1
+            # return redirect('login')
 
         # Authenticate the user
         user = authenticate(request, username=username, password=password)
 
-        # If user is loged in
-        if user is not None:
-            login(request, user)
-            return redirect('login')
-        else:
-            messages.error(request, 'Usuario o contraseña no existen')
+        # If user is logged in
+        if errors == 0:
+            if user is not None:
+                login(request, user)
+                return redirect('index')
+            else:
+                messages.error(request, 'Contraseña invalida')
+                # return redirect('login')
 
     context = {'page': page}
     return render(request, 'login/login.html', context)
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('index')
 
 def registerUser(request):
+    # redirect if authenticated
+    if request.user.is_authenticated:
+        return redirect('index')
+        
     context = {}
     # Register a new user
     if request.method == 'POST':
@@ -50,7 +64,7 @@ def registerUser(request):
             raw_password = form.cleaned_data.get('password1')
             account = authenticate(username=username, password=raw_password)
             login(request, account)
-            return redirect('login')
+            return redirect('index')
         else:
             context['registration_form'] = form
     else:
