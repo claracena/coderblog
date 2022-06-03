@@ -33,7 +33,7 @@ ___
 
 ### To Do
 
-* Página de inicio temporal
+* ~~Página de inicio temporal~~
 * Página de "Acerca de Nosotros"
 * Página de "Contáctenos"
 * Sistema de busqueda
