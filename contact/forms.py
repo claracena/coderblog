@@ -1,9 +1,9 @@
 from django import forms
-from .models import Contacts
+from .models import Contact
 
 class ContactForm(forms.ModelForm):
     class Meta:
-        model = Contacts
+        model = Contact
         fields = '__all__'
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Nombre'}),

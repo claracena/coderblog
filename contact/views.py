@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 
 # Create your views here.
-def contacts(request):
+def contact(request):
     data = {
         'form': ContactForm(),
     }
@@ -11,11 +11,11 @@ def contacts(request):
         form = ContactForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'contacts/success.html')
+            return render(request, 'contact/success.html')
         else:
             data['form'] = form
-    return render(request, 'contacts/contacts.html', data)
+    return render(request, 'contact/contact.html', data)
 
 def success(request):
-    return render(request, 'contacts/success.html')
+    return render(request, 'contact/success.html')
 

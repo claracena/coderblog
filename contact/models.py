@@ -8,7 +8,7 @@ choices = [
     [4, 'Otro']
 ]
 
-class Contacts(models.Model):
+class Contact(models.Model):
     name = models.CharField(max_length=50, null=False,verbose_name="")
     email = models.EmailField(null=False,verbose_name="")
     type = models.IntegerField(choices=choices,verbose_name="")
@@ -16,4 +16,4 @@ class Contacts(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.email + ' - ' + self.created.strftime('%d/%m/%Y %H:%M')
+        return self.name + ' - ' + self.created.strftime('%d/%m/%Y %H:%M')

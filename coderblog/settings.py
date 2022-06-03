@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
     'blog.apps.BlogConfig',
-    'contacts.apps.ContactsConfig',
+    'contact.apps.ContactConfig',
 ]
 
 AUTH_USER_MODEL = 'login.User'
@@ -118,7 +118,7 @@ TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
