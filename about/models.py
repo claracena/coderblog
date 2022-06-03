@@ -7,5 +7,4 @@ class About(models.Model):
     name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     info = models.TextField()
-    updated = models.DateTimeField('auto_now=True')
-    image = models.ImageField()
+    updated = models.DateTimeField(auto_now=True)

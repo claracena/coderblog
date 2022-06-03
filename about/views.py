@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import About
 
 # Create your views here.
 def about(request):
-    return render(request, 'about/index-temp.html')
+    person = About.objects.all()
+    context = {'about':person}
+    return render(request, 'about/about.html', context=context)
+
