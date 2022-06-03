@@ -25,7 +25,7 @@ ___
 * En la ruta del proyecto, ejecutar `pip install -r requirements.txt`
 * Ejecutar `python manage.py makemigrations`
 * Ejecutar `python manage.py migrate`
-* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones
+* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones (va a necesitar un super usuario para probar el panel de administracion custom)
 * Ejecutar `python manage.py runserver` para ejecutar el servidor
 * Navegar a [127.0.0.1:8000](http://127.0.0.1:8000)
 
