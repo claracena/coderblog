@@ -9,15 +9,8 @@
                 <form action='' method='POST'>{% csrf_token %}
                     <h1>Contactanos</h1>
                     <p>Si tienes alguna duda o sugerencia, puedes contactarnos a través de nuestro formulario de contacto.</p>
-                    {% comment %} <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Nombre" required> 
-                        <input class="form-control" type="email" placeholder="Correo" required>
-                        <textarea class="form-control" rows="5" placeholder="Mensaje..." required></textarea>
-                    </div> {% endcomment %}
-
                     {{ form }}
-
-                    <input type='submit' class="btn btn-primary btn-lg" value='Enviar'>
+                    <input type='submit' class="btn btn-primary" value='Enviar'>
                 </form>
             </div>
         </div>

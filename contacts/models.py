@@ -9,10 +9,10 @@ choices = [
 ]
 
 class Contacts(models.Model):
-    name = models.CharField(max_length=50, null=False)
-    email = models.EmailField(null=False)
-    type = models.IntegerField(choices=choices)
-    message = models.TextField(null=False)
+    name = models.CharField(max_length=50, null=False,verbose_name="")
+    email = models.EmailField(null=False,verbose_name="")
+    type = models.IntegerField(choices=choices,verbose_name="")
+    message = models.TextField(null=False,verbose_name="")
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
