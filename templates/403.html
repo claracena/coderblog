@@ -1,21 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'errors.html' %}
 
 {% block content %}
 
-<main>
+    <main>
 
-    <section id="404" class="light-bg">
-        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
-            <div class="col-lg-6 inner-right inner-bottom-md text-center">
-                <h1 class="custom-error-title">403</h1>
-                <p>
-                    Acceso restringido.<br>
-                    <a href="{% url 'login' %}">Por favor, regrese al inicio</a>.
-                </p>
+        <section id="403" class="light-bg">
+            <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
+                <div class="col-lg-6 inner-right inner-bottom-md text-center">
+                    <h1 class="custom-error-title">403</h1>
+                    <p>
+                        Acceso restringido.<br>
+                        <a href="{% url 'login' %}">Por favor, regrese al inicio</a>.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-</main>
+    </main>
 
-{% endblock %}
+{% endblock content %}
