@@ -6,4 +6,3 @@ class About(models.Model):
     info = models.TextField()
     image = models.ImageField(null=True, default='avatar.jpg')
     updated = models.DateTimeField(auto_now=True)
-    # USERNAME_FIELD = None
