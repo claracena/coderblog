@@ -7,15 +7,19 @@
         <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
             <div class="col-lg-6 inner-right inner-bottom-md text-center">
                 <form action='' method='POST'>{% csrf_token %}
-                    <h1>Contactanos</h1>
+                    {% comment %} <h1>Contactanos</h1>
                     <p>Si tienes alguna duda o sugerencia, puedes contactarnos a través de nuestro formulario de contacto.</p>
                     <div class="form-group">
                         <input class="form-control" type="text" placeholder="Nombre" required> 
                         <input class="form-control" type="email" placeholder="Correo" required>
                         <textarea class="form-control" rows="5" placeholder="Mensaje..." required></textarea>
-                    </div>
+                    </div> {% endcomment %}
+
+                    {{ form}}
+
                     <input type='submit' class="btn btn-primary btn-lg" value='Enviar'>
-                </form>    
+                </form>
+                {{ mensaje }}
             </div>
         </div>
     </section>
