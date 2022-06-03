@@ -10,7 +10,7 @@ ___
 
 <dl>
     <dt>Cesar Aracena</dt>
-    <dd>Sistema de login, </dd>
+    <dd>Sistema de login</dd>
     <dd>Paginas de error</dd>
     <dd>Sistema de búsqueda</dd>
     <dd>Area de admin personalizada</dd>
