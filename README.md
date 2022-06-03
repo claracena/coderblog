@@ -10,11 +10,18 @@ ___
 
 <dl>
     <dt>Cesar Aracena</dt>
-    <dd>Sistema de login, paginas de error, sistema de búsqueda y area de admin personalizada</dd>
+    <dd>Sistema de login, </dd>
+    <dd>Paginas de error</dd>
+    <dd>Sistema de búsqueda</dd>
+    <dd>Area de admin personalizada</dd>
     <dt>Jose Orozco</dt>
-    <dd>Sistema de formato HTML, sistema de búsqueda y area de admin personalizada</dd>
+    <dd>Sistema de formato HTML</dd>
+    <dd>Sistema de búsqueda</dd>
+    <dd>Area de admin personalizada</dd>
     <dt>Esteban Orozco</dt>
-    <dd>Sistema de registro y "acerca de nosotros" y contáctenos</dd>
+    <dd>Sistema de registro</dd>
+    <dd>Acerca de nosotros</dd>
+    <dd>Sistema de Contáctenos</dd>
 </dl>
 
 ___
