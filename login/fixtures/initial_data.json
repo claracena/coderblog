@@ -1,0 +1,53 @@
+[
+    {
+      "model": "login.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$DM76IWlDft1Qf17JdbOfEh$oaYfDd9rVngiw42hxsd7yAhuKsZhwz/DC31ZcyaBoA0=",
+        "is_superuser": 1,
+        "username": "caracena",
+        "first_name": "Cesar",
+        "last_name": "Aracena",
+        "email": "aracenameister@gmail.com",
+        "is_staff": 1,
+        "is_active": 1,
+        "date_joined": "2022-06-01 17:13:10",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus, dolor volutpat gravida suscipit, ex risus dignissim felis, eget placerat mauris lorem gravida metus. Morbi pharetra elit rutrum, vehicula nisl eu, eleifend tellus. Nulla volutpat feugiat enim, vel suscipit enim semper et. Proin ne.",
+        "avatar": "avatar.jpg"
+      }
+    },
+    {
+      "model": "login.user",
+      "pk": 2,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$h7g6DUs5nyAHO9o3e4rw9u$F6lDRNnjlCXxf901XtjdNaoVfgngclIwi5zsLUjcLhY=",
+        "is_superuser": 1,
+        "username": "jorozco",
+        "first_name": "Jose",
+        "last_name": "Orozco",
+        "email": "joqui@gmail.com",
+        "is_staff": 1,
+        "is_active": 1,
+        "date_joined": "2022-06-01 19:29:03",
+        "bio": "Aenean tellus orci, accumsan sit amet bibendum vitae, iaculis nec tortor. Proin accumsan, neque ac tempus cursus, leo mauris vulputate massa, ut blandit ex libero eget dui. Ut ut neque neque. Vivamus tincidunt rhoncus elit. Cras sagittis feugiat pretium. Pellentesque vehicula tincidunt dignissim. M.",
+        "avatar": "avatar.jpg"
+      }
+    },
+    {
+      "model": "login.user",
+      "pk": 3,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$WJ6SxiOCKjjf2A7wLdncWx$8sGNeIStA2nl0/k3fvDIb4xEsax9tpq49TwpvBwiYFs=",
+        "is_superuser": 1,
+        "username": "eorozco",
+        "first_name": "Esteban",
+        "last_name": "Orozco",
+        "email": "esteban@gmail.com",
+        "is_staff": 1,
+        "is_active": 1,
+        "date_joined": "2022-06-02 14:09:53",
+        "bio": "Etiam pulvinar eros sed tincidunt mollis. Nam maximus tincidunt urna, id pretium eros facilisis vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ut sem.",
+        "avatar": "avatar.jpg"
+      }
+    }
+  ]
