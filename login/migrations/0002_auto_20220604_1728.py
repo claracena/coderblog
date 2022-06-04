@@ -18,7 +18,7 @@ def load_initial_data(apps, schema_editor):
         is_active = 1,
         date_joined = "2022-06-01 17:13:10",
         bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus, dolor volutpat gravida suscipit, ex risus dignissim felis, eget placerat mauris lorem gravida metus. Morbi pharetra elit rutrum, vehicula nisl eu, eleifend tellus. Nulla volutpat feugiat enim, vel suscipit enim semper et. Proin ne.",
-        avatar = "avatar.jpg"
+        avatar = "cesar.png"
         )
     book_model.objects.create (
         id = 2,
@@ -32,7 +32,7 @@ def load_initial_data(apps, schema_editor):
         is_active = 1,
         date_joined = "2022-06-01 19:29:03",
         bio = "Aenean tellus orci, accumsan sit amet bibendum vitae, iaculis nec tortor. Proin accumsan, neque ac tempus cursus, leo mauris vulputate massa, ut blandit ex libero eget dui. Ut ut neque neque. Vivamus tincidunt rhoncus elit. Cras sagittis feugiat pretium. Pellentesque vehicula tincidunt dignissim. M.",
-        avatar = "avatar.jpg"
+        avatar = "joqui.jpeg"
         )
     book_model.objects.create (
         id = 3,
@@ -46,7 +46,7 @@ def load_initial_data(apps, schema_editor):
         is_active = 1,
         date_joined = "2022-06-02 14:09:53",
         bio = "Etiam pulvinar eros sed tincidunt mollis. Nam maximus tincidunt urna, id pretium eros facilisis vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ut sem.",
-        avatar = "avatar.jpg"
+        avatar = "esteban3.jpg"
         )
     book_model.objects.create (
         id = 4,
@@ -54,6 +54,76 @@ def load_initial_data(apps, schema_editor):
         is_superuser = 1,
         username = "admin",
         email = "admin@email.com",
+        is_staff = 0,
+        is_active = 1,
+        date_joined = "2022-06-04 17:39:03",
+        bio = "",
+        avatar = "avatar.jpg"
+        )
+    book_model.objects.create (
+        id = 5,
+        password = "pbkdf2_sha256$320000$u0GxiiJO2kmOYUbG8GatUT$SVWzb4+EXi1kS2ABqi7CSm+EVPirlTxsuuj7nhC+0t8=",
+        is_superuser = 0,
+        username = "juan",
+        first_name = "Juan",
+        last_name = "Hundt",
+        email = "juan@email.com",
+        is_staff = 0,
+        is_active = 1,
+        date_joined = "2022-06-04 17:39:03",
+        bio = "",
+        avatar = "avatar.jpg"
+        )
+    book_model.objects.create (
+        id = 6,
+        password = "pbkdf2_sha256$320000$u0GxiiJO2kmOYUbG8GatUT$SVWzb4+EXi1kS2ABqi7CSm+EVPirlTxsuuj7nhC+0t8=",
+        is_superuser = 0,
+        username = "silvana",
+        first_name = "Silvana",
+        last_name = "Orozco",
+        email = "silvana@email.com",
+        is_staff = 0,
+        is_active = 1,
+        date_joined = "2022-06-04 17:39:03",
+        bio = "Hola, soy Silo",
+        avatar = "avatar.jpg"
+        )
+    book_model.objects.create (
+        id = 7,
+        password = "pbkdf2_sha256$320000$u0GxiiJO2kmOYUbG8GatUT$SVWzb4+EXi1kS2ABqi7CSm+EVPirlTxsuuj7nhC+0t8=",
+        is_superuser = 0,
+        username = "carmen",
+        first_name = "Carmen",
+        last_name = "Orozco",
+        email = "carmuncha@email.com",
+        is_staff = 0,
+        is_active = 1,
+        date_joined = "2022-06-04 17:39:03",
+        bio = "",
+        avatar = "avatar.jpg"
+        )
+    book_model.objects.create (
+        id = 8,
+        password = "pbkdf2_sha256$320000$u0GxiiJO2kmOYUbG8GatUT$SVWzb4+EXi1kS2ABqi7CSm+EVPirlTxsuuj7nhC+0t8=",
+        is_superuser = 0,
+        username = "rolo",
+        first_name = "Rolando",
+        last_name = "Romero",
+        email = "rome@email.com",
+        is_staff = 0,
+        is_active = 1,
+        date_joined = "2022-06-04 17:39:03",
+        bio = "",
+        avatar = "avatar.jpg"
+        )
+    book_model.objects.create (
+        id = 9,
+        password = "pbkdf2_sha256$320000$u0GxiiJO2kmOYUbG8GatUT$SVWzb4+EXi1kS2ABqi7CSm+EVPirlTxsuuj7nhC+0t8=",
+        is_superuser = 0,
+        username = "gunso",
+        first_name = "Emmanuel",
+        last_name = "Gunst",
+        email = "elmasgunso@email.com",
         is_staff = 0,
         is_active = 1,
         date_joined = "2022-06-04 17:39:03",
