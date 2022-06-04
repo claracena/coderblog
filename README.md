@@ -32,7 +32,13 @@ ___
 * En la ruta del proyecto, ejecutar `pip install -r requirements.txt`
 * Ejecutar `python manage.py makemigrations`
 * Ejecutar `python manage.py migrate`
-* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones (va a necesitar un super usuario para probar el panel de administracion custom)
+* En la base de datos ya existirá un super usuario para realizar pruebas con los siguientes datos:
+
+   Nombre de usuario: admin
+
+   Contraseña: admin
+
+* Si desea puede crear otro super usuario ejecutando el comando `python manage.py createsuperuser`
 * Ejecutar `python manage.py runserver` para ejecutar el servidor
 * Navegar a [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
@@ -41,9 +47,9 @@ ___
 ### To Do
 
 * ~~Página de inicio temporal~~
-* Página de "Acerca de Nosotros"
+* ~~Página de "Acerca de Nosotros"~~
 * ~~Página de "Contáctenos"~~
 * Sistema de busqueda
 * ~~Sistema de administracion personalizado~~
 * Revisar todos los url's y redirects
-* Hacer un loaddata on migrate
+* ~~Hacer un loaddata on migrate~~

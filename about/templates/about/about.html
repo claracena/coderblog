@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+
+    <section id="about" class="light-bg">
+        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
+            <div class="col-12 inner-right inner-bottom-md">
+
+                <h2>Acerca de Nosotros</h2>
+
+                <p>
+                    Mauris non justo ullamcorper, consequat arcu quis, maximus nibh. Duis at lorem quis dolor pellentesque malesuada. Pellentesque consequat felis sagittis mauris facilisis porta. Quisque leo turpis, tempus ac commodo at, porttitor et leo. Curabitur a lectus in urna volutpat gravida in sed eros. Mauris vel orci eu ligula rhoncus mattis a id sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean et arcu sed tellus faucibus porta. Vestibulum rutrum pellentesque rutrum. In ut diam vulputate, aliquam mauris nec, tincidunt eros. Nam feugiat dignissim risus quis scelerisque.
+                </p>
+                
+                
+                {% for person in about %}
+
+                    {% if person.id < 4 %}
+
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-lg-4 col-xs-4">
+                                {% load static %}
+                                <img src="{% static '/assets/images/'%}{{ person.avatar }}" class="img-fluid rounded-start" alt="...">
+                                {%comment%}<p class="card-text text-center"><small class="text-muted ">Last updated 3 mins ago</small></p>{%endcomment%}
+                                </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                
+                                    <h2 class="card-title">{{ person.first_name }} {{ person.last_name }}</h2>
+                                    <p class="card-text">{{ person.bio }}</p>
+                                    <!-- <a href="/" class="btn btn-primary w-40 p-2 ">Ir al Blog</a> -->
+                                    <!-- <a href="{% url 'login' %}" class="btn btn-primary w-40 p-2 ">Enviar mensaje</a> -->
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endif %}
+                
+                {% endfor %}
+                    
+
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
