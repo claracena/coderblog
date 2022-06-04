@@ -4,7 +4,6 @@ from login.models import User
 # Create your views here.
 
 def search(request):
-    user = User.objects.get(id=2)
+    user = User.objects.all()
     context = {'user': user}
     return render(request, 'search/search.html', context)
-    # return render(request, 'search/search.html')
