@@ -17,23 +17,28 @@
                 
                 {% for person in about %}
 
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-xs-4">
-                        <img src="/static/assets/images/avatar.jpg" class="img-fluid rounded-start" alt="...">
-                        {%comment%}<p class="card-text text-center"><small class="text-muted ">Last updated 3 mins ago</small></p>{%endcomment%}
+                    {% if person.id < 4 %}
+
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-lg-4 col-xs-4">
+                                {% load static %}
+                                <img src="{% static '/assets/images/'%}{{ person.avatar }}" class="img-fluid rounded-start" alt="...">
+                                {%comment%}<p class="card-text text-center"><small class="text-muted ">Last updated 3 mins ago</small></p>{%endcomment%}
+                                </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                
+                                    <h2 class="card-title">{{ person.first_name }} {{ person.last_name }}</h2>
+                                    <p class="card-text">{{ person.bio }}</p>
+                                    <!-- <a href="/" class="btn btn-primary w-40 p-2 ">Ir al Blog</a> -->
+                                    <!-- <a href="{% url 'login' %}" class="btn btn-primary w-40 p-2 ">Enviar mensaje</a> -->
+                                </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                        
-                            <h2 class="card-title">{{person.name}} {{person.last_name}}</h2>
-                            <p class="card-text">Mauris non justo ullamcorper, consequat arcu quis, maximus nibh. Duis at lorem quis dolor pellentesque malesuada. Pellentesque consequat felis sagittis mauris facilisis porta. Quisque leo turpis, tempus ac commodo at, porttitor et leo. Curabitur a lectus in urna volutpat gravida in sed eros. ; {{person.info}}</p>
-                            <a href="/" class="btn btn-primary w-40 p-2 ">Ir al Blog</a>
-                            <a href="{% url 'login' %}" class="btn btn-primary w-40 p-2 ">Enviar mensaje</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+
+                    {% endif %}
                 
                 {% endfor %}
                     

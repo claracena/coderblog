@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import About
+from login.models import User
 
 # Create your views here.
 def about(request):
-    person = About.objects.all()
+    person = User.objects.all()
     context = {'about':person}
     return render(request, 'about/about.html', context=context)
 
