@@ -5,9 +5,31 @@
 <main>
 
     <section id="index" class="light-bg">
-        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
-            <div class="col-lg-6 inner-right inner-bottom-md text-center">
-                <h1>Config</h1>
+        <div class="container inner-top-xs inner-bottom">
+            <div class="row">
+                <div class="col-12 inner-right inner-bottom-md show">
+                    <h2>Configuraci&oacute;n Interna</h2>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#acercadenosotros" aria-expanded="false" aria-controls="acercadenosotros">Acerca de Nosotros</button>
+                    <div class="row">
+                        <div class="collapse col-12{% if userdata.name %} show{% endif %}" id="acercadenosotros">
+                            <p style="margin-bottom: 0 !important;">Seleccione uno de los perfiles para modificarlo:</p>
+                            {% for u in users %}
+                            <a class="btn btn-primary" href="?id={{ u.id }}" role="button">{{ u.name }}</a>
+                            {% endfor %}
+                            {% if userdata.name %}
+                            <div class="card card-body">
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    {% csrf_token%}
+                                    <input type="hidden" name="uid" value="{{ userdata.id }}">
+                                    {{ form }}
+                                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                </form>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
