@@ -9,5 +9,6 @@ class ContactForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'placeholder': 'Nombre'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Email'}),
             'message': forms.Textarea(attrs={'placeholder': 'Escriba su mensaje...'}),
+            'type': forms.Select(attrs={'style': 'width: -webkit-fill-available !important;'}),
         }
 

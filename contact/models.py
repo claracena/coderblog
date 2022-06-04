@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 choices = [
     [1, 'Consulta'],
-    [2, 'Sugerencias'],
-    [3, 'Errores'],
+    [2, 'Sugerencia'],
+    [3, 'Error'],
     [4, 'Otro']
 ]
 
