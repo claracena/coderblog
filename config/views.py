@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
-from django.core.files.storage import FileSystemStorage
-from .models import About
+from login.models import User
 from config.forms import AboutEditForm
+from pprint import pprint
 
 # Create your views here.
 def config(request):
@@ -17,11 +17,13 @@ def config(request):
             userselected = None
 
         if userselected is not None:
-            userdata = About.objects.get(id=userselected)
+            userdata = User.objects.get(id=userselected)
             data = {
-                'name': userdata.name,
-                'info': userdata.info,
-                'image': userdata.image
+                'username': userdata.username,
+                'first_name': userdata.first_name,
+                'last_name': userdata.last_name,
+                'bio': userdata.bio,
+                'avatar': userdata.avatar
             }
             form = AboutEditForm(data)
         else:
@@ -37,11 +39,12 @@ def config(request):
                 return redirect('config')
 
         try:
-            users = About.objects.all()
+            users = User.objects.all()
         except:
             return redirect('index')
 
         context = {'form': form, 'userdata': userdata, 'users': users}
+        pprint(dir(form.fields))
         return render(request, 'config/index.html', context)
     else:
         raise PermissionDenied()
