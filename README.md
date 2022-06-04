@@ -42,7 +42,7 @@ ___
 
 * ~~Página de inicio temporal~~
 * Página de "Acerca de Nosotros"
-* Página de "Contáctenos"
+* ~~Página de "Contáctenos"~~
 * Sistema de busqueda
-* Sistema de administracion personalizado
+* ~~Sistema de administracion personalizado~~
 * Revisar todos los url's y redirects
