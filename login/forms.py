@@ -23,7 +23,7 @@ class EditProfile(UserChangeForm):
                              widget=forms.EmailInput(attrs={'class': 'form-control'}))
     bio = forms.CharField(widget = forms.Textarea(attrs={'rows':'3', 'cols':'5', 'max_length': 300}))
     avatar = forms.FileField(required=False,
-                             widget=forms.FileInput(attrs={'class': 'form-control', 'accept': ".jpg, .jpeg, .png"}))
+                             widget=forms.FileInput(attrs={'class': 'form-control custom-avatar-input', 'accept': ".jpg, .jpeg, .png"}))
 
     class Meta:
         model = User
