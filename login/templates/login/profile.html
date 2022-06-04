@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+
+    <section id="index" class="light-bg">
+        <div class="container inner-top-xs inner-bottom">
+            <div class="row">
+                <div class="col-12 inner-right inner-bottom-md show">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token%}
+                        <label for="username">Nombre de usuario</label>
+                        {{ form.username }}
+                        <label for="username">Nombre</label>
+                        {{ form.first_name }}
+                        <label for="username">Apellido</label>
+                        {{ form.last_name }}
+                        <label for="username">E-mail</label>
+                        {{ form.email }}
+                        <label for="username">Biograf&iacute;a</label>
+                        {{ form.bio }}
+                        <label for="username">Avatar</label>
+                        {{ form.avatar }}
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
