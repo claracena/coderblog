@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
+    'config.apps.ConfigConfig',
 ]
 
 AUTH_USER_MODEL = 'login.User'
