@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
-from login.forms import RegistrationForm
+from login.forms import RegistrationForm, EditProfile
 
 # Create your views here.
 
@@ -72,3 +72,19 @@ def registerUser(request):
         context['registration_form'] = form
         
     return render(request, 'login/login.html', context)
+
+def edit_profile(request):
+    if not request.user.is_authenticated:
+        return redirect('index')
+
+    if request.method == 'POST':
+        form = EditProfile(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            id_form = form.save(commit=False)
+            id_form.save()
+            return redirect('index')
+    
+    form = EditProfile(instance=request.user)
+
+    context = {'form': form}
+    return render(request, 'login/profile.html', context)

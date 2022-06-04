@@ -89,3 +89,4 @@ local_settings.py
 .env
 db.sqlite3
 login/migrations/0004_contactenos.py
+apps.drawio

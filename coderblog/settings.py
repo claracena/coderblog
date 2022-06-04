@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'blog.apps.BlogConfig',
     'about.apps.AboutConfig',
+    'contact.apps.ContactConfig',
+    'config.apps.ConfigConfig',
 ]
 
 AUTH_USER_MODEL = 'login.User'
@@ -118,7 +120,7 @@ TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

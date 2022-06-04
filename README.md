@@ -10,11 +10,18 @@ ___
 
 <dl>
     <dt>Cesar Aracena</dt>
-    <dd>Sistema de login, paginas de error, sistema de búsqueda y area de admin personalizada</dd>
+    <dd>Sistema de login</dd>
+    <dd>Paginas de error</dd>
+    <dd>Sistema de búsqueda</dd>
+    <dd>Area de admin personalizada</dd>
     <dt>Jose Orozco</dt>
-    <dd>Sistema de formato HTML, sistema de búsqueda y area de admin personalizada</dd>
+    <dd>Sistema de formato HTML</dd>
+    <dd>Sistema de búsqueda</dd>
+    <dd>Area de admin personalizada</dd>
     <dt>Esteban Orozco</dt>
-    <dd>Sistema de registro y "acerca de nosotros" y contáctenos</dd>
+    <dd>Sistema de registro</dd>
+    <dd>Acerca de nosotros</dd>
+    <dd>Sistema de Contáctenos</dd>
 </dl>
 
 ___
@@ -25,17 +32,18 @@ ___
 * En la ruta del proyecto, ejecutar `pip install -r requirements.txt`
 * Ejecutar `python manage.py makemigrations`
 * Ejecutar `python manage.py migrate`
-* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones
+* Si quiere crear un usuario administrador, ejecutar `python manage.py createsuperuser` y seguir las instrucciones (va a necesitar un super usuario para probar el panel de administracion custom)
 * Ejecutar `python manage.py runserver` para ejecutar el servidor
-* Navegar a [127.0.0.1:8000](http://127.0.0.1:8000)
+* Navegar a [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ___
 
 ### To Do
 
-* Página de inicio temporal
+* ~~Página de inicio temporal~~
 * Página de "Acerca de Nosotros"
-* Página de "Contáctenos"
+* ~~Página de "Contáctenos"~~
 * Sistema de busqueda
-* Sistema de administracion personalizado
+* ~~Sistema de administracion personalizado~~
 * Revisar todos los url's y redirects
+* Hacer un loaddata on migrate
