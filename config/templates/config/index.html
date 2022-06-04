@@ -14,7 +14,7 @@
                         <div class="collapse col-12{% if userdata.username %} show{% endif %}" id="acercadenosotros">
                             <p style="margin-bottom: 0 !important;">Seleccione uno de los perfiles para modificarlo:</p>
                             {% for u in users %}
-                                {% if u.is_superuser == 1 %}
+                                {% if u.is_staff == 1 %}
                                     <a class="btn btn-primary" href="?id={{ u.id }}" role="button">{{ u.username }}</a>
                                 {% endif %}
                             {% endfor %}
@@ -50,10 +50,9 @@
                                     <tr>
                                         <th><label for="id_avatar">Avatar:</label></th>
                                         <td>
-                                            <input type="file" name="avatar" class="form-control" accept=".jpg, .jpeg, .png" id="id_avatar">
+                                            <input type="file" name="avatar" class="form-control custom-avatar-input" accept=".jpg, .jpeg, .png" id="id_avatar">
                                         </td>
                                     </tr>
-                                    <!-- {{ form }} -->
                                     <button type="submit" class="btn btn-primary">Guardar cambios</button>
                                 </form>
                             </div>
