@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+    <section id="contact" class="light-bg">
+        <div class="container inner-top-sm inner-bottom d-flex justify-content-center">
+            <div class="col-lg-6 inner-right inner-bottom-md">
+                <h1>Search page</h1>
+                {{ user.avatar }}
+                Nombre: {{ user.username }}
+                Email: {{ user.email }}
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+{% endblock %}
