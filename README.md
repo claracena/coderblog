@@ -46,3 +46,4 @@ ___
 * Sistema de busqueda
 * ~~Sistema de administracion personalizado~~
 * Revisar todos los url's y redirects
+* Hacer un loaddata on migrate
