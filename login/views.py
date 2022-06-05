@@ -95,11 +95,3 @@ def edit_profile(request):
 
     context = {'form': form}
     return render(request, 'login/profile.html', context)
-
-# def change_password(request):
-#     form = PasswordChangeView
-#     return redirect('index')
-
-# class PasswordsChangeView(PasswordChangeView):
-#     form_class = PasswordChangeForm
-#     success_url = redirect('index')

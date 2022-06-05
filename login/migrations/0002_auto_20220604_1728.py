@@ -46,7 +46,7 @@ def load_initial_data(apps, schema_editor):
         is_active = 1,
         date_joined = "2022-06-02 14:09:53",
         bio = "Etiam pulvinar eros sed tincidunt mollis. Nam maximus tincidunt urna, id pretium eros facilisis vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ut sem.",
-        avatar = "esteban3.jpg"
+        avatar = "esteban.jpg"
         )
     book_model.objects.create (
         id = 4,
