@@ -39,9 +39,21 @@ ___
    Contraseña: admin
 
 * Si desea puede crear otro super usuario ejecutando el comando `python manage.py createsuperuser`
-* Ejecutar `python manage.py runserver` para ejecutar el servidor
+* Debido a que el programa está configurado con `Debug = False` para manejar correctamente las páginas de error, se debe ejecutar `python manage.py runserver --insecure` para ejecutar el servidor
 * Navegar a [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+___
+
+### Que probar
+
+Actualmente se puede ver:
+
+* Acerca de Nosotros: Nombres y fotos reales, traídos de la base de datos
+* Contáctenos: Formulario habilitado, guardando cada contacto en la base de datos
+* Registro / Inicio de Sesión: Funcionando correctamente
+* Editar Perfil: Al estar registrado, se puede cambiar el perfil del usuario
+* Configuración: Los super usuarios pueden cambiar la información visible en "Acerca de Nosotros"
+* Búsqueda: Realiza búsqueda de usuarios por nombre de usuario, nombre y apellido
 ___
 
 ### To Do
