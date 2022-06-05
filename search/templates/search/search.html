@@ -11,11 +11,11 @@
                     <div class="row mt-3" style='justify-content: center'>
                         {% if search == 'resultado' %}
                         {% for u in user %}
-                        <div class="card m-2 shadow" style="width: 14rem;">
+                        <div class="card border-0 m-2 shadow" style="width: 14rem;">
                             {% load static %}
                             <img src= {% static "assets/images/avatar.jpg" %} class="card-img-top" alt="...">
-                            <div class="card-body">
-                            <h2 class="card-title"> {{ u.first_name }} {{ u.last_name }} </h2>
+                            <div class="card-body" style="margin: revert">
+                            <h2 class="card-title" style="margin: revert"> {{ u.first_name }} {{ u.last_name }} </h2>
                             </div>
                         </div>
                         {% endfor %}
