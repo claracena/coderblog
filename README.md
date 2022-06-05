@@ -49,7 +49,7 @@ ___
 * ~~Página de inicio temporal~~
 * ~~Página de "Acerca de Nosotros"~~
 * ~~Página de "Contáctenos"~~
-* Sistema de busqueda
+* ~~Sistema de busqueda~~
 * ~~Sistema de administracion personalizado~~
 * Revisar todos los url's y redirects
 * ~~Hacer un loaddata on migrate~~
