@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'contact.apps.ContactConfig',
     'config.apps.ConfigConfig',
+    'search.apps.SearchConfig',
 ]
 
 AUTH_USER_MODEL = 'login.User'
