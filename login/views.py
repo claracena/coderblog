@@ -2,11 +2,18 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 # from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
 from .models import User
-from login.forms import RegistrationForm, EditProfile
+from login.forms import RegistrationForm, EditProfile, ChangePassowrd
 
 # Create your views here.
+
+class PasswordsChangeView(PasswordChangeView):
+    form_class = ChangePassowrd
+    # form_class = PasswordChangeForm
+    success_url = reverse_lazy('index')
 
 def loginUser(request):
     # redirect if authenticated
@@ -88,3 +95,11 @@ def edit_profile(request):
 
     context = {'form': form}
     return render(request, 'login/profile.html', context)
+
+# def change_password(request):
+#     form = PasswordChangeView
+#     return redirect('index')
+
+# class PasswordsChangeView(PasswordChangeView):
+#     form_class = PasswordChangeForm
+#     success_url = redirect('index')

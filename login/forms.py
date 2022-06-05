@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from login.models import User
 
 class RegistrationForm(UserCreationForm):
@@ -28,3 +28,12 @@ class EditProfile(UserChangeForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'first_name', 'last_name', 'bio', 'avatar']
+
+class ChangePassowrd(PasswordChangeForm):
+    old_password = forms.CharField(label='Contraseña Actual', widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
+    new_password1 = forms.CharField(label='Contraseña Nueva', widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
+    new_password2 = forms.CharField(label='Repita la contraseña', widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password'}))
+
+    class Meta:
+        model = User
+        fields = ['old_password', 'new_password1', 'new_password2']
