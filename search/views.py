@@ -12,7 +12,7 @@ from django.db.models import Q
 def search(request):
     if request.method == 'POST':
         search_text = request.POST.get('search')
-        user = User.objects.filter(Q(username__contains=search_text) | Q(first_name__contains=search_text) | Q(last_name__contains=search_text) )
+        user = User.objects.filter(Q(first_name__contains=search_text) | Q(last_name__contains=search_text) )
         context = {'user': user, 'search': 'resultado'}
         return render(request, 'search/search.html', context)
     else:

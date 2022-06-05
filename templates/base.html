@@ -120,7 +120,7 @@
 									<a href="#" class="dropdown-toggle custom-top-link" data-toggle="dropdown"><i class="icon-search"></i></a>
 											  
 									<div class="dropdown-menu dropdown-menu-right">
-										<form class="navbar-form search" role="search" action='' method='POST'>
+										<form class="navbar-form search" role="search" action='{% url 'to_search' %}' method='POST'>
 											{% csrf_token %}
 											<input name="search" type="search" class="form-control" placeholder="Buscar un usuario">
 											<button type="submit" class="btn btn-submit icon-right-open"></button>
