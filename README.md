@@ -2,7 +2,7 @@
 
 ___
 
-Este será un blog completo creado con Python y Django. Actualmente falta el sistema de blog, el cual se implementará en las próximas semanas para completar la entrega del proyecto final del curso de Python de Coderhouse, comisión 31075.
+Este es el proyecto intermedio del curso de Python, camada 31075 de Coderhouse (dictado por Octavio Lafourcade), realizado por Orozco José, Orozco Esteban y Aracena César en Junio 2022.
 
 Si no desea descargar este proyecto pero ver su funcionamiento, puede ver el siguiente video: https://youtu.be/72iiFTjUDTo
 
@@ -52,7 +52,7 @@ Actualmente se puede ver:
 
 * Acerca de Nosotros: Nombres y fotos reales, traídos de la base de datos
 * Contáctenos: Formulario habilitado, guardando cada contacto en la base de datos
-* Registro / Inicio de Sesión: Funcionando correctamente
+* Registro / Inicio de Sesión
 * Editar Perfil: Al estar registrado, se puede cambiar el perfil del usuario
 * Configuración: Los super usuarios pueden cambiar la información visible en "Acerca de Nosotros"
 * Búsqueda: Realiza búsqueda de usuarios por nombre de usuario, nombre y apellido
