@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e4h!3pw-fyqw%km6f5^i7y1x4=#n*rjskijv85gr+*^t^_15mn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -88,7 +88,8 @@ WSGI_APPLICATION = 'coderblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -129,13 +130,15 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 
-MEDIA_URL = 'assets/images/'
+MEDIA_URL = 'static/assets/images/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'static')
+    # BASE_DIR / "static",
 ]
 
-MEDIA_ROOT = BASE_DIR / 'static/assets/images'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'assets', 'images')
+# MEDIA_ROOT = BASE_DIR / 'static/assets/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -13,7 +13,7 @@
                         {% for u in user %}
                         <div class="card border-0 m-2 shadow" style="width: 18rem;">
                             {% load static %}
-                            <img src= {% static "assets/images/avatar.jpg" %} class="card-img-top" alt="...">
+                            <img src="{% static '/assets/images/'%}{{ u.avatar }}" class="card-img-top" alt="...">
                             <div class="card-body" style="margin: revert">
                             <h2 class="card-title" style="margin: revert"> {{ u.first_name }} {{ u.last_name }} </h2>
                             </div>
