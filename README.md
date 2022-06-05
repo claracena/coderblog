@@ -4,6 +4,8 @@ ___
 
 Este será un blog completo creado con Python y Django. Actualmente falta el sistema de blog, el cual se implementará en las próximas semanas para completar la entrega del proyecto final del curso de Python de Coderhouse, comisión 31075.
 
+Si no desea descargar este proyecto pero ver su funcionamiento, puede ver el siguiente video: https://youtu.be/72iiFTjUDTo
+
 ___
 
 ### Autores
@@ -63,5 +65,7 @@ ___
 * ~~Página de "Contáctenos"~~
 * ~~Sistema de busqueda~~
 * ~~Sistema de administracion personalizado~~
-* Revisar todos los url's y redirects
+* ~~Revisar todos los url's y redirects~~
 * ~~Hacer un loaddata on migrate~~
+* ~~Paginas de error personalizadas~~
+* ~~Edicion de perfiles con cambio de password~~
